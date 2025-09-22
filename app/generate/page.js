@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -46,7 +46,7 @@ const Generate = () => {
     };
 
     try {
-      const r = await fetch("http://localhost:3000/api/add", requestOptions);
+      const r = await fetch("https://bittree-psi.vercel.app/api/add", requestOptions);
       const result = await r.json();
 
       if (result.success) {
@@ -187,4 +187,10 @@ const Generate = () => {
   );
 };
 
-export default Generate;
+export default function GeneratePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Generate />
+    </Suspense>
+  );
+}

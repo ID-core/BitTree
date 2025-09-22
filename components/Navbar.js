@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     showNavbar && (
-      <nav className="z-1 lg:py-3 md:py-4 md:px-8 sm:py-4 sm:px-8 bg-white absolute w-[80vw] top-10 right-[10vw] rounded-full mx-auto pl-10 text-black flex justify-between items-center transition-transform duration-500">
+      <nav className="z-1 lg:py-4 md:py-4 md:px-8 sm:py-4 sm:px-8 bg-white absolute w-[80vw] top-10 right-[10vw] rounded-full mx-auto pl-10 text-black flex justify-between items-center transition-transform duration-500">
         {/* Left section: logo + nav links in one line */}
         <div className="flex items-center gap-10">
           <Link href={"/"}>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const pricing = () => {
+const Pricing = () => {
   const router = useRouter();
   const [text, setText] = useState("");
 
@@ -270,4 +270,4 @@ const pricing = () => {
   );
 };
 
-export default pricing;
+export default Pricing;

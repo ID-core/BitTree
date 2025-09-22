@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const router = useRouter();
@@ -211,8 +212,8 @@ export default function Home() {
        </section>
 
 
- {/* ----------- sec 7: footer ----------- */}
-      <section className="bg-violet-600 text-pink-300 flex flex-col items-center justify-center pt-30 pb-50 flex items-center ">
+ {/* ----------- sec 7: last section ----------- */}
+      <section className="bg-violet-600 text-pink-300 flex flex-col items-center justify-center pt-30 flex items-center ">
         <div className="w-[50%] mx-auto">
           <h1 className=" font-extrabold sm:text-3xl text-center"
           style={{ fontSize: "50px" }}>
@@ -234,6 +235,7 @@ export default function Home() {
             </button>
           </div>
         </div>
+              <Footer/>
       </section>
 
     </main>
