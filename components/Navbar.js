@@ -172,7 +172,7 @@ const Navbar = () => {
                         Resources
                       </li>
                       <li className="flex items-center gap-2 font-semibold hover:bg-gray-100 p-3 mb-42 rounded cursor-pointer">
-                        How to use Linktree
+                        How to use BitTree
                       </li>
                     </ul>
                     {/* Column 2: Example details */}
@@ -315,7 +315,7 @@ const Navbar = () => {
                           Link in bio + tools
                         </div>
                         <div className="text-gray-600 text-sm mb-4">
-                          Customize your Linktree
+                          Customize your BitTree
                         </div>
                       </div>
                       <div>
@@ -336,7 +336,7 @@ const Navbar = () => {
                       </div>
                       <div>
                         <div className="font-bold mb-1 text-md">
-                          Linktree for every social platform
+                          BitTree for every social platform
                         </div>
                         <div className="text-gray-600 text-sm mb-2">
                           Grow and engage your audience everywhere
@@ -352,7 +352,7 @@ const Navbar = () => {
                         className="rounded-xl w-full h-40 object-cover mb-2 bg-blue-700"
                       />
                       <div className="font-semibold text-md mb-2">
-                        Join 70M+ using Linktree as their link in bio
+                        Join 70M+ using BitTree as their link in bio
                       </div>
                       <div className="text-gray-700 text-sm">
                         One link to share everything you create, curate, and
@@ -396,7 +396,7 @@ const Navbar = () => {
                         Resources
                       </li>
                       <li className="flex items-center gap-3 font-semibold hover:bg-gray-100 p-3 rounded cursor-pointer text-md">
-                        How to use Linktree
+                        How to use BitTree
                       </li>
                     </ul>
 

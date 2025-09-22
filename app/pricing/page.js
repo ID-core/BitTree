@@ -110,7 +110,7 @@ const pricing = () => {
               Enhanced Customization
             </h3>
             <p className="text-[#1a1a40] mb-4 text-left">
-              From video backgrounds to removing the Linktree logo: get even
+              From video backgrounds to removing the BitTree logo: get even
               more power to make your page pop.
             </p>
 
@@ -140,7 +140,7 @@ const pricing = () => {
             </h3>
             <p className="text-[#1a1a40] mb-4 text-left">
               See what&apos;s performing and download extensive analytics to
-              shape your Linktree for success.
+              shape your BitTree for success.
             </p>
 
             <div className="flex gap-2 justify-center text-black mt-4">
@@ -169,7 +169,7 @@ const pricing = () => {
             </h3>
             <p className="mb-4 flex text-left">
               Build an audience you reach anywhere, any time by collecting email
-              and SMS details on your Linktree.
+              and SMS details on your BitTree.
             </p>
 
             <div className="flex gap-2 justify-center mt-4 text-white">

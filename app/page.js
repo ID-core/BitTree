@@ -27,7 +27,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-6 font-medium text-base sm:text-lg md:text-lg text-white max-w-xl">
-            Join 70M+ people using Linktree for their link in bio. One link to
+            Join 70M+ people using BitTree for their link in bio. One link to
             help you share everything you create, curate, and sell from your
             Instagram, TikTok, Twitter, YouTube, and other social media
             profiles.
@@ -72,7 +72,7 @@ export default function Home() {
         <div className="flex flex-col justify-center">
           <h2 className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-purple-900">
             <p>Create and customize</p>
-            <p>your Linktree in minutes</p>
+            <p>your BitTree in minutes</p>
           </h2>
 
           <p className="mt-6 font-medium text-base sm:text-lg text-black">
@@ -92,13 +92,13 @@ export default function Home() {
   {/* Left Text Section */}
   <div className="max-w-2xl w-full text-center md:text-left">
     <h1 className="text-3xl lg:text-5xl sm:text-4xl md:text-4xl font-extrabold leading-tight mb-6">
-      Share your Linktree from your Instagram, TikTok,
+      Share your BitTree from your Instagram, TikTok,
       <br className="hidden sm:block" />
       Twitter and other bios
     </h1>
 
     <p className="text-white text-base sm:text-lg md:text-xl mb-8 sm:mb-10 max-w-2xl mx-auto md:mx-0">
-      Add your unique Linktree URL to all the platforms and places you find
+      Add your unique BitTree URL to all the platforms and places you find
       your audience. Then use your QR code to drive your offline traffic online.
     </p>
 
@@ -136,7 +136,7 @@ export default function Home() {
           className="w-full rounded-lg mb-10"
         />
         <p className="text-black text-2xl font-semibold">
-          Share your content in limitless ways on your Linktree.
+          Share your content in limitless ways on your BitTree.
         </p>
       </div>
 
