@@ -49,7 +49,7 @@ export default function Home() {
               onClick={createTree}
               disabled={isEmpty}
               className={`box2 bg-pink-300 text-black font-bold py-3 px-5 rounded-full w-full ${
-                isEmpty ? "cursor-not-allowed opacity-80" : "hover:cursor-pointer"
+                isEmpty ? "cursor-not-allowed opacity-80" : "hover:cursor-pointer transition-transform duration-200 hover:scale-105 transition-transform duration-200"
               }`}
             >
               Create BitTree
@@ -90,7 +90,7 @@ export default function Home() {
             bio landing page designed to convert.
           </p>
 
-          <button className="bg-purple-900 text-white font-bold py-3 px-5 rounded-full mt-8 w-fit cursor-pointer hover:scale-105 transition-transform">
+          <button className="bg-purple-900 text-white font-bold py-3 px-5 rounded-full mt-8 w-fit cursor-pointer hover:scale-105 transition-transform duration-200">
             Get Started for Free
           </button>
         </div>
@@ -112,7 +112,7 @@ export default function Home() {
     </p>
 
     <Link href="/generate">
-      <button className="bg-[#e5bdf0] text-[#780017] text-base sm:text-lg font-semibold cursor-pointer px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:scale-105 transition-transform">
+      <button className="bg-[#e5bdf0] text-[#780017] text-base sm:text-lg font-semibold cursor-pointer px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:scale-105 transition-transform duration-200">
         Get started for free
       </button>
     </Link>
@@ -181,7 +181,7 @@ export default function Home() {
       The fast, friendly and powerful link in bio tool.
     </h2>
     <Link href="/pricing">
-    <button className="bg-[#f0c4ec] text-black font-bold py-5 px-15 rounded-full hover:bg-[#e09cdc] transition hover:cursor-pointer">
+    <button className="bg-[#f0c4ec] text-black font-bold py-5 px-15 rounded-full hover:bg-[#e09cdc] transition hover:cursor-pointer transition-transform duration-200">
       Explore all plans
     </button>
     </Link>
@@ -239,7 +239,7 @@ export default function Home() {
               onClick={createTree}
               disabled={isEmpty}
               className={`box2 bg-[#d5f831] text-black font-bold py-4 px-2 rounded-full w-2/5 ${
-                isEmpty ? "cursor-not-allowed opacity-80" : "hover:cursor-pointer"
+                isEmpty ? "cursor-not-allowed opacity-80" : "hover:cursor-pointer hover:scale-105 transition-transform duration-200"
               }`}
             >
               Create your BitTree

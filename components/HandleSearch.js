@@ -10,6 +10,7 @@ export default function HandleSearch({
   const router = useRouter();
   const [text, setText] = useState("");
   const [placeholder, setPlaceholder] = useState(placeholderText);
+  const [isPlaceholderError, setIsPlaceholderError] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
   const searchHandle = async () => {
@@ -20,6 +21,7 @@ export default function HandleSearch({
       const res = await fetch(`/api/check?handle=${encodeURIComponent(handle)}`);
       if (!res.ok) {
         setPlaceholder("Error checking handle");
+        setIsPlaceholderError(false);
         setText("");
         setTimeout(() => setPlaceholder(placeholderText), 2500);
         setIsSearching(false);
@@ -30,11 +32,16 @@ export default function HandleSearch({
         router.push(`/${handle}`);
       } else {
         setText("");
-        setPlaceholder("No BitTree with this handle exists");
-        setTimeout(() => setPlaceholder(placeholderText), 3000);
+        setPlaceholder("Handle not exists");
+        setIsPlaceholderError(true);
+        setTimeout(() => {
+          setPlaceholder(placeholderText);
+          setIsPlaceholderError(false);
+        }, 3000);
       }
     } catch (err) {
       setPlaceholder("Network error");
+      setIsPlaceholderError(false);
       setTimeout(() => setPlaceholder(placeholderText), 2500);
     } finally {
       setIsSearching(false);
@@ -52,16 +59,16 @@ export default function HandleSearch({
     <div className="boxes flex flex-col md:flex-row gap-4 w-full max-w-xl items-stretch">
       <input
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e) => { setText(e.target.value); setIsPlaceholderError(false); }}
         onKeyDown={onKeyDown}
         type="text"
         placeholder={placeholder}
-        className={inputClass}
+        className={`${inputClass} ${isPlaceholderError ? 'placeholder:text-red-500 placeholder:italic placeholder:text-sm' : ''}`}
       />
       <button
         onClick={searchHandle}
         disabled={isSearching}
-        className={`${buttonClass} py-3 px-5 w-full ${isSearching ? "opacity-70 cursor-wait" : "hover:scale-105"}`}
+        className={`${buttonClass} py-3 px-5 w-full ${isSearching ? "opacity-70 cursor-wait" : "hover:scale-105 cursor-pointer"} transition-transform duration-200`}
       >
         {isSearching ? "Searching..." : "Search"}
       </button>

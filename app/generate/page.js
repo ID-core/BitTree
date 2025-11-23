@@ -74,7 +74,8 @@ const Generate = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br bg-[#e8c0e9] pt-[10vh] grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 px-6 pb-8 text-black items-center">
+    // add cursor-wait when loading so user sees waiting cursor while creating
+    <div className={`min-h-screen bg-gradient-to-br bg-[#e8c0e9] pt-[10vh] grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 px-6 pb-8 text-black items-center ${loading ? 'cursor-wait' : ''}`}>
       {/* Left Column */}
       <div className="flex flex-col justify-center items-center h-full sm:pt-12 ">
         <div className="w-full max-w-2xl p-8 lg:pl-12 lg:pr-12 lg:pb-8 lg:mt-13 overflow-y-auto max-h-[80vh] form-scrollbar">
@@ -144,29 +145,31 @@ const Generate = () => {
             className="w-full bg-white rounded-full px-5 py-3 text-black border border-pink-200 focus:border-pink-400 outline-none mb-2 text-base lg:text-lg"
           />
 
-          <button
-            disabled={
+          {(() => {
+            const isDisabled =
               loading ||
               !pic.trim() ||
               !handle?.trim() ||
               !desc.trim() ||
               !links[0].linktext?.trim() ||
-              !links[0].link?.trim()
-            }
-            onClick={submitLinks}
-            className={`mt-6 font-bold ${
-              loading ||
-              !pic.trim() ||
-              !handle?.trim() ||
-              !desc.trim() ||
-              !links[0].linktext?.trim() ||
-              !links[0].link?.trim()
-                ? "bg-black/40 text-white cursor-not-allowed"
-                : "bg-black text-white hover:bg-pink-700"
-            } py-3 rounded-full px-6 transition w-full lg:w-auto text-lg`}
-          >
-            {loading ? "Creating..." : "Create your BitTree"}
-          </button>
+              !links[0].link?.trim();
+
+            const btnClass = loading
+              ? 'bg-black/40 text-white cursor-wait'
+              : isDisabled
+              ? 'bg-black/40 text-white cursor-not-allowed'
+              : 'bg-black text-white hover:bg-pink-700';
+
+            return (
+              <button
+                disabled={isDisabled}
+                onClick={submitLinks}
+                className={`mt-6 font-bold ${btnClass} py-3 rounded-full px-6 transition w-full lg:w-auto text-lg`}
+              >
+                {loading ? 'Creating...' : 'Create your BitTree'}
+              </button>
+            );
+          })()}
         </div>
       </div>
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import "@/app/globals.css";
 import clientPromise from "@/lib/mongodb";
 import { notFound } from "next/navigation";
-import HandleSearch from "@/components/HandleSearch";
+import ShareHeader from "@/components/ShareHeader";
 
 export default async function Page({ params }) {
   const handle = params.handle;
@@ -20,6 +20,7 @@ export default async function Page({ params }) {
 
   return (
     <>
+      <ShareHeader />
       <div
         className="min-h-screen bg-cover bg-center overflow-scroll"
         style={{ backgroundImage: `url('/username_wallpaper.jpg')` }}
@@ -27,9 +28,6 @@ export default async function Page({ params }) {
         <div className="text-black min-h-screen flex justify-center items-start py-10">
           {item && (
             <div className="data flex flex-col mt-10 items-center max-w-md w-full px-6">
-              <div className="w-full mb-6">
-                <HandleSearch />
-              </div>
               <img
                 src={item.pic}
                 alt="main pic"
