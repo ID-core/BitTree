@@ -75,18 +75,18 @@ export default function ShareHeader() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between mb-4">
-              <div className="text-lg font-medium">Share</div>
+              <div className="text-lg font-bold text-black">Share</div>
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close"
-                className="text-gray-500 hover:text-gray-800 text-2xl leading-none"
+                className="text-black hover:text-gray-800 text-2xl leading-none"
               >
                 ×
               </button>
             </div>
 
             <label className="block text-sm text-gray-600 mb-2">Link</label>
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-col sm:flex-col md:flex-row lg:flex-row">
               <input
                 readOnly
                 value={url}

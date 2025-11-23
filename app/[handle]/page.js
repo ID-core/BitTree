@@ -34,7 +34,7 @@ export default async function Page({ params }) {
                 className="w-24 h-24 rounded-full border-4 border-white shadow-lg mb-4 animate-fadeInUp"
               />
               <span className="font-extrabold text-2xl ">@{item.handle}</span>
-              <span className="desc w-80 test-center mt-2 text-gray-700">
+              <span className="desc w-80 test-center mt-2 px-[15px] text-gray-700">
                 {item.desc}
               </span>
 
