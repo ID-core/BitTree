@@ -1,6 +1,6 @@
 # BitTree
 
-BitTree is a modern "link in bio" web application inspired by Linktree. It enables users to create a personalized landing page to share multiple links, social profiles, and more—all in one place. Built with Next.js, React, Tailwind CSS, and MongoDB, BitTree offers a fast, responsive, and customizable experience.
+BitTree is a modern "link in bio" web application inspired by BitTree. It enables users to create a personalized landing page to share multiple links, social profiles, and more—all in one place. Built with Next.js, React, Tailwind CSS, and MongoDB, BitTree offers a fast, responsive, and customizable experience.
 
 ## Features
 

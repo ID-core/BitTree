@@ -7,10 +7,12 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import HandleSearch from "@/components/HandleSearch";
 
 export default function Home() {
   const router = useRouter();
   const [text, setText] = useState("");
+  const isEmpty = text.trim() === "";
 
   const createTree = () => {
     if (text.trim()) {
@@ -21,7 +23,7 @@ export default function Home() {
   return (
     <main>
       {/* ------------ Section 1 ------------ */}
-      <section className="shorter_dp bg-[#254f1a] min-h-[70vh] grid sm:pt-[25%] grid-cols-1 md:grid-cols-2 px-4 md:pt-20 pb-10 gap-8 text-white ">
+      <section className="shorter_dp bg-[#254f1a] min-h-[70vh] grid pt-[32%] grid-cols-1 md:grid-cols-2 px-4 md:pt-20 lg:pt-15 pb-10 gap-8 text-white sm:pt-[20%] ">
         <div className="lg:pt-12 sm:pt-10 flex flex-col justify-start items-start sm:px-18 md:px-24 lg:px-32">
           <h1 className="font-extrabold text-4xl sm:text-6xl md:text-5xl lg:text-6xl md:pt-12 lg:text-7xl text-[rgb(210,232,35)] leading-tight">
             <p>Everything you are in one, simple link in bio.</p>
@@ -45,10 +47,16 @@ export default function Home() {
             />
             <button
               onClick={createTree}
-              className="box2 bg-pink-300 text-black font-bold py-3 px-5 rounded-full hover:cursor-pointer w-full"
+              disabled={isEmpty}
+              className={`box2 bg-pink-300 text-black font-bold py-3 px-5 rounded-full w-full ${
+                isEmpty ? "cursor-not-allowed opacity-80" : "hover:cursor-pointer"
+              }`}
             >
               Create BitTree
             </button>
+          </div>
+          <div className="mt-4 w-full">
+            <HandleSearch />
           </div>
         </div>
 
@@ -82,7 +90,7 @@ export default function Home() {
             bio landing page designed to convert.
           </p>
 
-          <button className="bg-purple-900 text-white font-bold py-3 px-5 rounded-full mt-8 w-fit">
+          <button className="bg-purple-900 text-white font-bold py-3 px-5 rounded-full mt-8 w-fit cursor-pointer hover:scale-105 transition-transform">
             Get Started for Free
           </button>
         </div>
@@ -104,7 +112,7 @@ export default function Home() {
     </p>
 
     <Link href="/generate">
-      <button className="bg-[#e5bdf0] text-[#780017] text-base sm:text-lg font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:scale-105 transition-transform">
+      <button className="bg-[#e5bdf0] text-[#780017] text-base sm:text-lg font-semibold cursor-pointer px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:scale-105 transition-transform">
         Get started for free
       </button>
     </Link>
@@ -229,10 +237,20 @@ export default function Home() {
             />
             <button
               onClick={createTree}
-              className="box2 bg-[#d5f831] text-black font-bold py-4 px-2 rounded-full hover:cursor-pointer w-2/5"
+              disabled={isEmpty}
+              className={`box2 bg-[#d5f831] text-black font-bold py-4 px-2 rounded-full w-2/5 ${
+                isEmpty ? "cursor-not-allowed opacity-80" : "hover:cursor-pointer"
+              }`}
             >
               Create your BitTree
             </button>
+          </div>
+          <div className="mt-6">
+            <HandleSearch
+              inputClass={`box1 bg-white text-black rounded-md py-4 px-3 w-3/5`}
+              buttonClass={`box2 bg-[#d5f831] text-black font-bold py-4 px-2 rounded-full w-2/5`}
+              placeholderText="Enter your handle"
+            />
           </div>
         </div>
               <Footer/>

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-purple-500  text-white w-full px-4 py-3 text-sm z-50 mt-30">
       <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-8">
         <p className="text-center">
-          &copy; {currentYear} Get me A Chai — All rights reserved!
+          &copy; {currentYear} BitTree
         </p>
         <p className="text-center">
           Made with ❤️ by ID
